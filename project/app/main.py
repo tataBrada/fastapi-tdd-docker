@@ -1,9 +1,12 @@
 import logging
 import os
+
 from fastapi import FastAPI
 from tortoise.contrib.fastapi import register_tortoise
-from .api import ping, summaries
+
 from app.db import init_db
+
+from .api import ping, summaries
 
 logger = logging.getLogger("uvicorn")
 
